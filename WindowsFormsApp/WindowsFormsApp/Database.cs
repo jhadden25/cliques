@@ -7,14 +7,21 @@ using System.Net.Http;
 using Firebase;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Newtonsoft.Json;
 
 namespace WindowsFormsApp
 {
     class Database
     {
         FirebaseClient firebase = new FirebaseClient("https://cliques-b6c58-default-rtdb.firebaseio.com/");
-        HttpClient client = new HttpClient();
-        await firebase.Child("Hello").Child("World").PutAsync("and Scott");
+
+        public async void DoSomething()
+        {
+            string str = "League of Legends";
+            dynamic jsonObj = JsonConvert.SerializeObject(str);
+            await firebase.Child("Hello").Child("World").PutAsync(jsonObj);
+
+        }
 
     }
 }

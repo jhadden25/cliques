@@ -14,6 +14,10 @@ namespace WindowsFormsApp
         [STAThread]
         static void Main()
         {
+            Database db = new Database();
+            db.DoSomething();
+            //db.Function();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
