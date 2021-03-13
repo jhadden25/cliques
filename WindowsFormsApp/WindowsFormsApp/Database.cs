@@ -20,24 +20,11 @@ namespace WindowsFormsApp
             dynamic jsonObj = JsonConvert.SerializeObject(data);
             await firebase.Child("Gaming").Child(key).PutAsync(jsonObj);
         }
-    }
 
-    class FormData
-    {
-        string GAME;
-        public FormData()
+        public async void GetFromDB()
         {
-            GAME = "null";
-        }
-
-        public void setGame(string s)
-        {
-            GAME = s;
-        }
-
-        public string getGame()
-        {
-            return GAME;
+            var dataFromDB = await firebase.Child("dinosaurs").OrderByKey().StartAt("pterodactyl").LimitToFirst(2).OnceAsync<FormData>();
         }
     }
+
 }
