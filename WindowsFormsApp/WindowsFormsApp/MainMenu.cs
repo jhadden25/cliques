@@ -15,6 +15,7 @@ namespace WindowsFormsApp
         public MainMenu()
         {
             InitializeComponent();
+            //onStart
         }
 
         private void HideOptions()
