@@ -14,8 +14,8 @@ namespace WindowsFormsApp
         [STAThread]
         static void Main()
         {
-            Database db = new Database();
-            db.DoSomething();
+            //Database db = new Database();
+            //db.PostDataToDB("Name", "Josh");
             //db.Function();
 
             Application.EnableVisualStyles();
