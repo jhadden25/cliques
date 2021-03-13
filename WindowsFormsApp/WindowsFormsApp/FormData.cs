@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace WindowsFormsApp
 {
     public class FormData
     {
         public static string GAME { get; set; }
-        string ageLevel { get; set; }
-        string contact { get; set; }
-        string teamName { get; set; }
-        string teamRank { get; set; }
-        int currentRoster { get; set; }
-        int maxRoster { get; set; }
+        public string ageLevel { get; set; }
+        public string contact { get; set; }
+        public string teamName { get; set; }
+        public string teamRank { get; set; }
+        public int currentRoster { get; set; }
+        public int maxRoster { get; set; }
 
     }
 }

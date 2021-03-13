@@ -14,9 +14,10 @@ namespace WindowsFormsApp
         [STAThread]
         static void Main()
         {
-            //Database db = new Database();
+            Database db = new Database();
             //db.PostDataToDB("Name", "Josh");
             //db.Function();
+            db.GetFromDB();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

@@ -23,7 +23,13 @@ namespace WindowsFormsApp
 
         public async void GetFromDB()
         {
-            var dataFromDB = await firebase.Child("dinosaurs").OrderByKey().StartAt("pterodactyl").LimitToFirst(2).OnceAsync<FormData>();
+            var datas = await firebase.Child("Gaming").Child("Rocket League").OrderByKey().OnceAsync<FormData>();
+
+            foreach (var DBdata in datas)
+            {
+                var jsonSerial = DBdata.Object;
+                Console.WriteLine($"{ DBdata.Key} is { jsonSerial.ageLevel }");
+            }
         }
     }
 

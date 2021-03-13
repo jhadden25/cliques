@@ -36,3 +36,5 @@ C:\Users\hunts\Desktop\HACKATHON\HackathonRepo\cliques\WindowsFormsApp\WindowsFo
 C:\Users\hunts\Desktop\HACKATHON\HackathonRepo\cliques\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
 C:\Users\hunts\Desktop\HACKATHON\HackathonRepo\cliques\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.MainMenu.resources
 C:\Users\hunts\Desktop\HACKATHON\HackathonRepo\cliques\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form2.resources
+C:\Users\1126j\Documents\GitHub\cliques\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form2.resources
+C:\Users\1126j\Documents\GitHub\cliques\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.MainMenu.resources
