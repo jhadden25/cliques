@@ -12,9 +12,11 @@ namespace WindowsFormsApp
 {
     public partial class MainMenu : Form
     {
+        FormData game;
         public MainMenu()
         {
             InitializeComponent();
+            game = new FormData();
         }
 
         private void HideOptions()
@@ -38,13 +40,15 @@ namespace WindowsFormsApp
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
-
+            game.setGame("Rocket League");
+           
         }
         private void pictureBox2_Click(object sender, EventArgs e)//CSGO
         {
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
+            game.setGame("CSGO");
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)//League
@@ -52,6 +56,7 @@ namespace WindowsFormsApp
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
+            game.setGame("League Of Legends");
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)//Dota
@@ -59,18 +64,21 @@ namespace WindowsFormsApp
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
+            game.setGame("Dota 2");
         }
         private void pictureBox8_Click(object sender, EventArgs e)//Valorant
         {
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
+            game.setGame("Valorant");
         }
         private void pictureBox9_Click(object sender, EventArgs e)//Overwatch
         {
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
+            game.setGame("Overwatch");
         }
 
 
@@ -84,7 +92,7 @@ namespace WindowsFormsApp
             Form2 form2 = new Form2();
             this.Hide();
             form2.ShowDialog();
-            this.Close();
+            this.Close();//
         }
 
         private void button2_Click(object sender, EventArgs e)//Create Team

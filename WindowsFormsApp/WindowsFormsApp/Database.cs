@@ -21,4 +21,23 @@ namespace WindowsFormsApp
             await firebase.Child("Gaming").Child(key).PutAsync(jsonObj);
         }
     }
+
+    class FormData
+    {
+        string GAME;
+        public FormData()
+        {
+            GAME = "null";
+        }
+
+        public void setGame(string s)
+        {
+            GAME = s;
+        }
+
+        public string getGame()
+        {
+            return GAME;
+        }
+    }
 }
