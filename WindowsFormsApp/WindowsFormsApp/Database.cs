@@ -13,15 +13,21 @@ namespace WindowsFormsApp
 {
     class Database
     {
-        FirebaseClient firebase = new FirebaseClient("https://cliques-b6c58-default-rtdb.firebaseio.com/");
+        static readonly FirebaseClient firebase = new FirebaseClient("https://cliques-b6c58-default-rtdb.firebaseio.com/");
 
-        public async void PostDataToDB(string key, string data)
+        public static async void PostDataToDB(string game, string key, string data)
         {
             dynamic jsonObj = JsonConvert.SerializeObject(data);
-            await firebase.Child("Gaming").Child(key).PutAsync(jsonObj);
+            await firebase.Child("Gaming").Child(game).Child(key).PutAsync(jsonObj);
         }
 
-        public async void GetFromDB()
+        public static async void PostDataToDB(string game, FormData fd)
+        {
+            dynamic jsonObj = JsonConvert.SerializeObject(fd);
+            await firebase.Child("Gaming").Child(game).PutAsync(jsonObj);
+        }
+
+        public static async void GetFromDB()
         {
             var datas = await firebase.Child("Gaming").Child("Rocket League").OrderByKey().OnceAsync<FormData>();
 
