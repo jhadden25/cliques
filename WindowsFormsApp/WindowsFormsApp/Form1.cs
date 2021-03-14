@@ -21,12 +21,20 @@ namespace WindowsFormsApp
         {
             var datas = await firebase.Child("Gaming").Child(game).OrderByKey().OnceAsync<FormData>();
             Label[] nameArray = new Label[] {Name1, Name2, Name3, Name4};
+            Label[] ageArray = new Label[] {Age1, Age2, Age3, Age4 };
+            Label[] slotsArray = new Label[] {Slots1, Slots2, Slots3, Slots4 };
+            Label[] rankArray = new Label[] {Rank1, Rank2, Rank3, Rank4 };
+            Label[] contactArray = new Label[] {Contact1, Contact2, Contact3, Contact4 };
             int i = 0;
             foreach (var DBdata in datas)
             {
                 var jsonSerial = DBdata.Object;
                 //Console.WriteLine($"{ DBdata.Key} is { jsonSerial.ageLevel }");
                 nameArray[i].Text = jsonSerial.teamName;
+                ageArray[i].Text = jsonSerial.ageLevel;
+                contactArray[i].Text = jsonSerial.contact;
+                rankArray[i].Text = jsonSerial.teamRank;
+                slotsArray[i].Text = jsonSerial.slotsAvailable.ToString();
                 i++;
             }
         }
