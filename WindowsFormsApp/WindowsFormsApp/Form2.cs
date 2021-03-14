@@ -8,77 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using Ranks;
 
 namespace WindowsFormsApp
 {
     public partial class Form2 : Form
     {
         public FormData formData;
-        public enum CSRanks
-        {
-            Silver = 0,
-            GoldNova = 1,
-            MasterGuardian = 2,
-            DMG = 3,
-            LEM = 4,
-            SMFC = 5, 
-            GlobalElite = 6
-        }
-        public enum RLRanks
-        {
-            Bronze = 0,
-            Silver = 1,
-            Gold = 2,
-            Platinum = 3,
-            Diamond = 4,
-            Champion = 5,
-            GC = 6,
-            SSL = 7
-        }
-        public enum LOLRanks
-        {
-            Iron = 0,
-            Bronze = 1,
-            Silver = 2,
-            Gold = 3,
-            Platinum = 4,
-            Diamond = 5,
-            Master = 6,
-            Grandmaster = 7,
-            Challenger = 8
-        }
-        public enum DotaRanks
-        {
-            Herald = 0,
-            Guardian = 1,
-            Crusader = 2,
-            Archon = 3,
-            Legend = 4,
-            Ancient = 5,
-            Divine = 6,
-        }
-        public enum ValRanks
-        {
-            Iron = 0,
-            Bronze = 1,
-            Silver = 2,
-            Gold = 3,
-            Platinum = 4,
-            Diamond = 5,
-            Immortal = 6,
-            Radiant = 7
-        }
-        public enum OWRanks
-        {
-            Bronze = 1,
-            Silver = 2,
-            Gold = 3,
-            Platinum = 4,
-            Diamond = 5,
-            Master = 6,
-            Grandmaster = 7,
-            Top500 = 8
-        }
 
         bool clickedSubmit = false;
         public Form2()
@@ -210,7 +146,10 @@ namespace WindowsFormsApp
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            formData.teamRank = listBox1.SelectedItem.ToString();
+            if (FormData.GAME == "Rocket League")
+            {
+                formData.teamRank = Enum.Parse(typeof(RLRanks), listBox1.SelectedItem.ToString()).ToString();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
