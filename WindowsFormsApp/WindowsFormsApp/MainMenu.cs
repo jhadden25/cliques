@@ -33,12 +33,29 @@ namespace WindowsFormsApp
             label5.Visible = false;
             label6.Visible = false;
         }
-     
+
+        private void ShowOptions()
+        {
+            pictureBox1.Visible = true;
+            pictureBox2.Visible = true;
+            pictureBox3.Visible = true;
+            pictureBox7.Visible = true;
+            pictureBox8.Visible = true;
+            pictureBox9.Visible = true;
+            label1.Visible = true;
+            label2.Visible = true;
+            label3.Visible = true;
+            label4.Visible = true;
+            label5.Visible = true;
+            label6.Visible = true;
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)//Rocket League
         {
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
+            button3.Visible = true;
             FormData.GAME = "Rocket League";
            
         }
@@ -47,6 +64,7 @@ namespace WindowsFormsApp
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
+            button3.Visible = true;
             FormData.GAME = "CSGO";
         }
 
@@ -55,6 +73,7 @@ namespace WindowsFormsApp
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
+            button3.Visible = true;
             FormData.GAME = "League Of Legends";
         }
 
@@ -63,6 +82,7 @@ namespace WindowsFormsApp
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
+            button3.Visible = true;
             FormData.GAME = "Dota 2";
         }
         private void pictureBox8_Click(object sender, EventArgs e)//Valorant
@@ -70,6 +90,7 @@ namespace WindowsFormsApp
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
+            button3.Visible = true;
             FormData.GAME = "Valorant";
         }
         private void pictureBox9_Click(object sender, EventArgs e)//Overwatch
@@ -77,6 +98,7 @@ namespace WindowsFormsApp
             HideOptions();
             button1.Visible = true;
             button2.Visible = true;
+            button3.Visible = true;
             FormData.GAME = "Overwatch";
         }
 
@@ -101,6 +123,19 @@ namespace WindowsFormsApp
             this.Hide();
             form2.ShowDialog();
             this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            button3.Visible = false;
+            button2.Visible = false;
+            button1.Visible = false;
+            ShowOptions();
         }
     }
 }

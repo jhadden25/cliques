@@ -27,9 +27,9 @@ namespace WindowsFormsApp
             await firebase.Child("Gaming").Child(game).Child(uID.ToString()).PutAsync(jsonObj);
         }
 
-        public static async void GetFromDB()
+        public static async void GetFromDB(string game)
         {
-            var datas = await firebase.Child("Gaming").Child("Rocket League").OrderByKey().OnceAsync<FormData>();
+            var datas = await firebase.Child("Gaming").Child(game).OrderByKey().OnceAsync<FormData>();
 
             foreach (var DBdata in datas)
             {

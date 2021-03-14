@@ -137,6 +137,7 @@
     <None Include="Resources\background4.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\add.png" />
     <Content Include="Resources\cs_splash.jpg" />
     <Content Include="Resources\dota2_splash.jpg" />
     <Content Include="Resources\league_splash.jpg" />

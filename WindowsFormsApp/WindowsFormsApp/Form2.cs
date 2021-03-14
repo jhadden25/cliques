@@ -14,6 +14,73 @@ namespace WindowsFormsApp
     public partial class Form2 : Form
     {
         public FormData formData;
+        public enum CSRanks
+        {
+            Silver = 0,
+            GoldNova = 1,
+            MasterGuardian = 2,
+            DMG = 3,
+            LEM = 4,
+            SMFC = 5, 
+            GlobalElite = 6
+        }
+        public enum RLRanks
+        {
+            Bronze = 0,
+            Silver = 1,
+            Gold = 2,
+            Platinum = 3,
+            Diamond = 4,
+            Champion = 5,
+            GC = 6,
+            SSL = 7
+        }
+        public enum LOLRanks
+        {
+            Iron = 0,
+            Bronze = 1,
+            Silver = 2,
+            Gold = 3,
+            Platinum = 4,
+            Diamond = 5,
+            Master = 6,
+            Grandmaster = 7,
+            Challenger = 8
+        }
+        public enum DotaRanks
+        {
+            Herald = 0,
+            Guardian = 1,
+            Crusader = 2,
+            Archon = 3,
+            Legend = 4,
+            Ancient = 5,
+            Divine = 6,
+        }
+        public enum ValRanks
+        {
+            Iron = 0,
+            Bronze = 1,
+            Silver = 2,
+            Gold = 3,
+            Platinum = 4,
+            Diamond = 5,
+            Immortal = 6,
+            Radiant = 7
+        }
+        public enum OWRanks
+        {
+            Bronze = 1,
+            Silver = 2,
+            Gold = 3,
+            Platinum = 4,
+            Diamond = 5,
+            Master = 6,
+            Grandmaster = 7,
+            Top500 = 8
+        }
+
+        bool clickedSubmit = false;
         public Form2()
         {  
             InitializeComponent();
@@ -21,25 +88,75 @@ namespace WindowsFormsApp
 
             if (FormData.GAME == "Rocket League") {
                 this.BackgroundImage = Properties.Resources.rocket_league_sport;
+                listBox1.Items.Add(RLRanks.Bronze.ToString());
+                listBox1.Items.Add(RLRanks.Silver.ToString());
+                listBox1.Items.Add(RLRanks.Gold.ToString());
+                listBox1.Items.Add(RLRanks.Platinum.ToString());
+                listBox1.Items.Add(RLRanks.Diamond.ToString());
+                listBox1.Items.Add(RLRanks.Champion.ToString());
+                listBox1.Items.Add(RLRanks.GC.ToString());
+                listBox1.Items.Add(RLRanks.SSL.ToString());
+
             }
             else if(FormData.GAME == "CSGO"){
                 this.BackgroundImage = Properties.Resources.cs_splash;
+                listBox1.Items.Add(CSRanks.Silver.ToString());
+                listBox1.Items.Add(CSRanks.GoldNova.ToString());
+                listBox1.Items.Add(CSRanks.MasterGuardian.ToString());
+                listBox1.Items.Add(CSRanks.DMG.ToString());
+                listBox1.Items.Add(CSRanks.LEM.ToString());
+                listBox1.Items.Add(CSRanks.SMFC.ToString());
+                listBox1.Items.Add(CSRanks.GlobalElite.ToString());
             }
             else if (FormData.GAME == "League Of Legends")
             {
                 this.BackgroundImage = Properties.Resources.league_splash;
+                listBox1.Items.Add(LOLRanks.Iron.ToString());
+                listBox1.Items.Add(LOLRanks.Bronze.ToString());
+                listBox1.Items.Add(LOLRanks.Silver.ToString());
+                listBox1.Items.Add(LOLRanks.Gold.ToString());
+                listBox1.Items.Add(LOLRanks.Platinum.ToString());
+                listBox1.Items.Add(LOLRanks.Diamond.ToString());
+                listBox1.Items.Add(LOLRanks.Master.ToString());
+                listBox1.Items.Add(LOLRanks.Grandmaster.ToString());
+                listBox1.Items.Add(LOLRanks.Challenger.ToString());
+
             }
             else if (FormData.GAME == "Dota 2")
             {
                 this.BackgroundImage = Properties.Resources.dota2_splash;
+                listBox1.Items.Add(DotaRanks.Herald.ToString());
+                listBox1.Items.Add(DotaRanks.Guardian.ToString());
+                listBox1.Items.Add(DotaRanks.Crusader.ToString());
+                listBox1.Items.Add(DotaRanks.Archon.ToString());
+                listBox1.Items.Add(DotaRanks.Legend.ToString());
+                listBox1.Items.Add(DotaRanks.Ancient.ToString());
+                listBox1.Items.Add(DotaRanks.Divine.ToString());
             }
             else if (FormData.GAME == "Valorant")
             {
                 this.BackgroundImage = Properties.Resources.val_splash;
+                listBox1.Items.Add(ValRanks.Iron.ToString());
+                listBox1.Items.Add(ValRanks.Bronze.ToString());
+                listBox1.Items.Add(ValRanks.Silver.ToString());
+                listBox1.Items.Add(ValRanks.Gold.ToString());
+                listBox1.Items.Add(ValRanks.Platinum.ToString());
+                listBox1.Items.Add(ValRanks.Diamond.ToString());
+                listBox1.Items.Add(ValRanks.Immortal.ToString());
+                listBox1.Items.Add(ValRanks.Radiant.ToString());
             }
             else if (FormData.GAME == "Overwatch")
             {
                 this.BackgroundImage = Properties.Resources.ov_splash;
+                listBox1.Items.Add(OWRanks.Bronze.ToString());
+                listBox1.Items.Add(OWRanks.Silver.ToString());
+                listBox1.Items.Add(OWRanks.Gold.ToString());
+                listBox1.Items.Add(OWRanks.Platinum.ToString());
+                listBox1.Items.Add(OWRanks.Diamond.ToString());
+                listBox1.Items.Add(OWRanks.Master.ToString());
+                listBox1.Items.Add(OWRanks.Grandmaster.ToString());
+                listBox1.Items.Add(OWRanks.Top500.ToString());
+
             }
             formData = new FormData();
         }
@@ -71,7 +188,7 @@ namespace WindowsFormsApp
 
         private void textBox4_TextChanged(object sender, EventArgs e)//Team Rank
         {
-            formData.teamRank = textBox4.Text;
+            
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)//# Team Members
@@ -81,11 +198,27 @@ namespace WindowsFormsApp
 
         private void button1_Click(object sender, EventArgs e)//Submit button
         {
-            Random random = new Random();
-            int uniqueID = random.Next(1, 100000);
-            Database.PostDataToDB(FormData.GAME, uniqueID, formData);
+            if (clickedSubmit == false)
+            {
+                clickedSubmit = true;
+                button1.Enabled = false;
+                Random random = new Random();
+                int uniqueID = random.Next(1, 100000);
+                Database.PostDataToDB(FormData.GAME, uniqueID, formData);  
+            }
         }
 
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            formData.teamRank = listBox1.SelectedItem.ToString();
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MainMenu mm = new MainMenu();
+            this.Hide();
+            mm.ShowDialog();
+            this.Close();
+        }
     }
 }
