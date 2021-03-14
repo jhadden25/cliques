@@ -55,7 +55,7 @@ namespace WindowsFormsApp
 
         private void textBox5_TextChanged(object sender, EventArgs e)//# Team Members
         {
-            formData.maxRoster = int.Parse(textBox5.Text);
+            formData.slotsAvailable = int.Parse(textBox5.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)//Submit button

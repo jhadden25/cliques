@@ -14,8 +14,7 @@ namespace WindowsFormsApp
         public string contact { get; set; }
         public string teamName { get; set; }
         public string teamRank { get; set; }
-        public int currentRoster { get; set; }
-        public int maxRoster { get; set; }
+        public int slotsAvailable { get; set; }
 
     }
 }
