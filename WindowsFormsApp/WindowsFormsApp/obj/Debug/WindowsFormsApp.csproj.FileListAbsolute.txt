@@ -58,3 +58,4 @@ C:\Users\hunts\Desktop\HACKATHON\cliques\WindowsFormsApp\WindowsFormsApp\obj\Deb
 C:\Users\hunts\Desktop\HACKATHON\cliques\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CopyComplete
 C:\Users\hunts\Desktop\HACKATHON\cliques\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
 C:\Users\hunts\Desktop\HACKATHON\cliques\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+C:\Users\1126j\Documents\GitHub\cliques\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.Form1.resources

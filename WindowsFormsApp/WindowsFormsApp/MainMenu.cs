@@ -88,9 +88,9 @@ namespace WindowsFormsApp
 
         private void button1_Click(object sender, EventArgs e)//Join Team
         {
-            Form2 form2 = new Form2();
+            Form1 form1 = new Form1();
             this.Hide();
-            form2.ShowDialog();
+            form1.ShowDialog();
             this.Close();
         }
 

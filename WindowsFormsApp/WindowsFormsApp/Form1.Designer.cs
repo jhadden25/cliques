@@ -317,6 +317,7 @@
             this.label16.Size = new System.Drawing.Size(94, 18);
             this.label16.TabIndex = 19;
             this.label16.Text = "Team Name:";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
             // 
