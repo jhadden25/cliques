@@ -15,15 +15,38 @@ namespace WindowsFormsApp
     {
         public FormData formData;
         public Form2()
-        {
+        {  
             InitializeComponent();
             label2.Text = "Form a " + FormData.GAME + " Team";
+
+            if (FormData.GAME == "Rocket League") {
+                this.BackgroundImage = Properties.Resources.rocket_league_sport;
+            }
+            else if(FormData.GAME == "CSGO"){
+                this.BackgroundImage = Properties.Resources.cs_splash;
+            }
+            else if (FormData.GAME == "League Of Legends")
+            {
+                this.BackgroundImage = Properties.Resources.league_splash;
+            }
+            else if (FormData.GAME == "Dota 2")
+            {
+                this.BackgroundImage = Properties.Resources.dota2_splash;
+            }
+            else if (FormData.GAME == "Valorant")
+            {
+                this.BackgroundImage = Properties.Resources.val_splash;
+            }
+            else if (FormData.GAME == "Overwatch")
+            {
+                this.BackgroundImage = Properties.Resources.ov_splash;
+            }
             formData = new FormData();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //this.BackgroundImage = 
+            
         }
 
         private void label2_Click(object sender, EventArgs e)

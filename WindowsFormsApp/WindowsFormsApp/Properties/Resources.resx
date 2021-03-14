@@ -139,4 +139,23 @@
   <data name="background4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="rocket_league_sport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rocket_league_sport.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cs_splash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cs_splash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="league_splash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\league_splash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dota2_splash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dota2_splash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="val_splash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\val_splash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ov_splash" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ov_splash.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+	
 </root>

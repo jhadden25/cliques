@@ -60,6 +60,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormData.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="MainMenu.cs">
@@ -67,12 +73,6 @@
     </Compile>
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,6 +126,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\cs_splash.jpg" />
+    <Content Include="Resources\dota2_splash.jpg" />
+    <Content Include="Resources\league_splash.jpg" />
+    <Content Include="Resources\ov_splash.jpg" />
+    <Content Include="Resources\rocket_league_sport.jpg" />
+    <Content Include="Resources\val_splash.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
