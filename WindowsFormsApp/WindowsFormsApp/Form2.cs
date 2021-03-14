@@ -55,8 +55,6 @@ namespace WindowsFormsApp
         }
     
 
-       
-
         private void textBox1_TextChanged(object sender, EventArgs e)//Age Level text box
         {
             formData.ageLevel = textBox1.Text;
@@ -83,8 +81,9 @@ namespace WindowsFormsApp
 
         private void button1_Click(object sender, EventArgs e)//Submit button
         {
-           
-            Database.PostDataToDB(FormData.GAME, formData);
+            Random random = new Random();
+            int uniqueID = random.Next(1, 100000);
+            Database.PostDataToDB(FormData.GAME, uniqueID, formData);
         }
 
 

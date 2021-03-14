@@ -96,8 +96,7 @@ namespace WindowsFormsApp
 
         private void button2_Click(object sender, EventArgs e)//Create Team
         {
-            Random random = new Random();
-            int uniqueID = random.Next(1, 100000);
+            
             Form2 form2 = new Form2();
             this.Hide();
             form2.ShowDialog();

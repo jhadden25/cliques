@@ -21,10 +21,10 @@ namespace WindowsFormsApp
             await firebase.Child("Gaming").Child(game).Child(key).PutAsync(jsonObj);
         }
 
-        public static async void PostDataToDB(string game, FormData fd)
+        public static async void PostDataToDB(string game, int uID, FormData fd)
         {
             dynamic jsonObj = JsonConvert.SerializeObject(fd);
-            await firebase.Child("Gaming").Child(game).PutAsync(jsonObj);
+            await firebase.Child("Gaming").Child(game).Child(uID.ToString()).PutAsync(jsonObj);
         }
 
         public static async void GetFromDB()
