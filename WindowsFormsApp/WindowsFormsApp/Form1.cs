@@ -76,26 +76,35 @@ namespace WindowsFormsApp
 
             
             int i = 0;
+            int numTeams = 0;
             foreach (var DBdata in datas)
             {
                 var jsonSerial = DBdata.Object;
                 TeamSheet[i] = jsonSerial;
+
+                if (DBdata.Object.teamName.ToString().Length > 1)
+                    numTeams++;
                 i++;
             }
 
-            bubbleSort(TeamSheet, FormData.GAME);
-
-
-            for (int j = 0; j < TeamSheet.Length; j++)
+            if (numTeams == 4)
             {
-                
-                //Console.WriteLine($"{ DBdata.Key} is { jsonSerial.ageLevel }");
-                nameArray[j].Text = TeamSheet[j].teamName;
-                ageArray[j].Text = TeamSheet[j].ageLevel;
-                contactArray[j].Text = TeamSheet[j].contact;
-                rankArray[j].Text = TeamSheet[j].teamRank.ToString();
-                slotsArray[j].Text = TeamSheet[j].slotsAvailable.ToString();
+                bubbleSort(TeamSheet, FormData.GAME);
             }
+
+
+
+                for (int j = 0; j < numTeams; j++)
+                {
+
+                    //Console.WriteLine($"{ DBdata.Key} is { jsonSerial.ageLevel }");
+                    nameArray[j].Text = TeamSheet[j].teamName;
+                    ageArray[j].Text = TeamSheet[j].ageLevel;
+                    contactArray[j].Text = TeamSheet[j].contact;
+                    rankArray[j].Text = TeamSheet[j].teamRank.ToString();
+                    slotsArray[j].Text = TeamSheet[j].slotsAvailable.ToString();
+                }
+            numTeams = 0;
         }
 
         public Form1()
